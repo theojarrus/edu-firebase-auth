@@ -1,0 +1,14 @@
+<resources>
+    <string name="default_web_client_id" translatable="false">webClientId.apps.googleusercontent.com</string>
+
+    <string name="app_name">FirebaseAuth</string>
+    <string name="login_with_firebase">Login with Firebase</string>
+    <string name="login_with_custom">Login with Custom</string>
+    <string name="open_firebase_auth">Open Firebase Auth</string>
+    <string name="login">Login</string>
+    <string name="login_with_email">Login with Email</string>
+    <string name="login_with_google">Login with Google</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="create_firestore_user">Create firestore user</string>
+</resources>
