@@ -1,23 +1,12 @@
 package com.example.firebaseauth;
 
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
+import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.example.firebaseauth.databinding.ActivityMainBinding;
-import com.google.android.gms.tasks.OnCanceledListener;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,5 +20,8 @@ public class MainActivity extends AppCompatActivity {
 
         binding.openFirebaseLogin.setOnClickListener(v -> startActivity(FirebaseLoginActivity.createIntent(this)));
         binding.openCustomLogin.setOnClickListener(v -> startActivity(CustomLoginActivity.createIntent(this)));
+
+        String uid = FirebaseAuth.getInstance().getUid();
+        Toast.makeText(this, "Login: " + uid, Toast.LENGTH_SHORT).show();
     }
 }
